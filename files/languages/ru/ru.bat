@@ -9,26 +9,26 @@ goto pwd
 :pwd
 cls
 title Password...
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
-echo Пожалуйста введите пароль (он написан в моём гитхаб репозитории либо напиши "fikali" и нажми Enter)
+echo Пожалуйста введите пароль (он написан в моём гитхаб репозитории либо напиши "LOL_VIRUS" и нажми Enter)
 
 echo.
 Set /p choice="Пароль: "
 if not defined choice goto pwd
-if "%choice%"=="fiksuprpak" (goto namet)
-if "%choice%"=="fikali" (goto pass)
+if "%choice%"=="ggytprgs" (goto namet)
+if "%choice%"=="LOL_VIRUS" (goto pass)
 cls
 goto pwd
 
 :pass
 cls
-start C:\fikali\files\pass.txt
+start C:\LOL_VIRUS\files\pass.txt
 goto pwd
 
 :namet
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Как вас зовут?
 
@@ -41,7 +41,7 @@ goto hello
 
 :hello
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Здравствуйте, %name%
 echo.
@@ -51,8 +51,8 @@ goto menu
 
 :menu
 cls
-title Fikali by SuperPaket123YT and help from GGYT :3
-type C:\fikali\files\art.txt
+title (C) By GGYT Progs and help from DiopinYT :3
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo %name%, выберите действие:
 echo.
@@ -75,7 +75,7 @@ goto menu
 
 :q1
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo %name%, вы уверены, что хотите запустить вирус? (y/n)
 
@@ -89,7 +89,7 @@ goto q1
 
 :q2
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo ПОСЛЕДНЕЕ ПРЕДУПРЕЖДЕНИЕ!!! 
 echo Это приложение будет включаться при КАЖДОМ ВКЛЮЧЕНИИ ПК/НОУТБУКА!!! %name%, вы уверены в своих действиях? (y/n)
@@ -102,13 +102,13 @@ if "%choice%"=="n" (goto menu)
 
 :strt
 cls
-start C:\fikali\files\bomb\startall.bat
+start C:\LOL_VIRUS\files\bomb\startall.bat
 cls
 goto stop
 
 :stop
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Нажми Enter чтобы закрыть все.
 pause >nul
@@ -126,7 +126,7 @@ REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v notepad /f
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v control /f
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v ramspam /f
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Вирус из автозагрузки удалён
 echo.
@@ -136,7 +136,7 @@ goto menu
 
 :setng
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo %name%, выберите пункт:
 echo.
@@ -155,7 +155,7 @@ goto setng
 
 :color
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo %name%, выберите цвет текста
 echo.
@@ -233,7 +233,7 @@ goto menu
 
 :updcenter
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo %name%, вы хотите проверить обновления? (y/n)
 echo.
@@ -247,9 +247,9 @@ goto updcenter
 
 :updchk
 cls
-del C:\temp_fikali\ver.txt
-bitsadmin.exe /transfer "GGYT" https://raw.githubusercontent.com/SuperPaket123YT/Fikali/fikali/ver.txt C:\temp_fikali\ver.txt >nul
-cd C:\temp_fikali
+del C:\tmp_lolvirus\ver.txt
+bitsadmin.exe /transfer "GGYT" https://raw.githubusercontent.com/GGYT1/LOL_VIRUS/master/ver.txt C:\tmp_lolvirus\ver.txt >nul
+cd C:\tmp_lolvirus
 find /I ver.txt "2.0" >nul
 if %errorlevel% equ 0 (
   goto updno
@@ -260,7 +260,7 @@ goto updchk
 
 :updfind
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Обновление найдено. Скачать? (y/n)
 echo.
@@ -274,20 +274,20 @@ goto updfind
 
 :upddown
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Скачивание...
-bitsadmin.exe /transfer "GGYT" https://github.com/SuperPaket123YT/Fikali/releases/download/fikalivirus/Fikali.exe C:\temp_fikali\Fikali.exe >nul
+bitsadmin.exe /transfer "GGYT" https://github.com/GGYT1/LOL_VIRUS/releases/download/lolvirus/LOL_VIRUS.exe C:\tmp_lolvirus\LOL_VIRUS.exe >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Скачивание завершено. Установка....
 timeout /t 5 /nobreak
-start C:\temp_fikali\Fikali.exe
+start C:\tmp_lolvirus\LOL_VIRUS.exe
 exit
 
 :updno
-type C:\Fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo У вас установлена последняя версия.
 echo.
@@ -297,7 +297,7 @@ goto setng
 
 :exit
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo %name%, вы точно хотите выйти? (y/n)
 
@@ -311,18 +311,18 @@ goto exit
 
 :exwt
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Пожалуйста подождите...
 timeout /t 5 /nobreak >nul
-del C:\temp_fikali /s /q
+del C:\tmp_lolvirus /s /q
 exit
 
 :hlp
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
-echo !!!FIKALI, ЭТО ВИРУС КОТОРЫЙ МОЖЕТ НАГРУЗИТЬ ВАШУ СИСТЕМУ ДО ТОГО, ЧТО ВЫ НЕ СМОЖЕТЕ ЕЙ ПОЛЬЗОВАТЬСЯ!!! 
+echo !!!LOL_VIRUS, ЭТО ВИРУС КОТОРЫЙ МОЖЕТ НАГРУЗИТЬ ВАШУ СИСТЕМУ ДО ТОГО, ЧТО ВЫ НЕ СМОЖЕТЕ ЕЙ ПОЛЬЗОВАТЬСЯ!!! 
 echo.
 echo Инструкция:
 echo.
@@ -337,7 +337,7 @@ echo.
 echo Читать дальше (нажмите Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Пункт 1: "Запустить вирус"
 echo.
@@ -349,7 +349,7 @@ echo.
 echo Читать дальше (нажмите Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Пункт 2: "Настройки"
 echo.
@@ -362,7 +362,7 @@ echo.
 echo Читать дальше (нажмите Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Пункт 2.1: "Поменять цвет текста"
 echo.
@@ -371,16 +371,16 @@ echo.
 echo Читать далее (нажмите Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Пункт 2.2: "Центр обновлений"
 echo.
-echo Он не работает пока что. Зачем для него писать инструкцию?
+echo Центр обновления поможет проверить, есть ли новая версия вируса на GitHub.
 echo.
 echo Читать далее (нажмите Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Пункт 2.3: "Назад"
 echo.
@@ -389,7 +389,7 @@ echo.
 echo Читать далее (нажмите Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Пункт 3: "Удалить вирус из автозагрузки"
 echo.
@@ -398,7 +398,7 @@ echo.
 echo Читать дальше (нажмите Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Пункт 4: "Инструкция" (это окно)
 echo.
@@ -407,7 +407,7 @@ echo.
 echo Читать дальше (нажмите Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Пункт 5: "Выйти"
 echo.

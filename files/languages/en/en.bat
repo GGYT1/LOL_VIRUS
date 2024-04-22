@@ -9,29 +9,52 @@ goto pwd
 :pwd
 cls
 title Password...
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
-echo Please enter the password (it is written in my github repository or write "fikali" and press Enter)
+echo Please enter the password (it is written in my github repository or write "LOL_VIRUS" and press Enter)
 
 echo.
 Set /p choice="Password: "
 if not defined choice goto pwd
-if "%choice%"=="fiksuprpak" (goto menu)
-if "%choice%"=="fikali" (goto pass)
+if "%choice%"=="ggytprgs" (goto namet)
+if "%choice%"=="LOL_VIRUS" (goto pass)
 cls
 goto pwd
 
 :pass
 cls
-start C:\fikali\files\pass.txt
+start C:\LOL_VIRUS\files\pass.txt
 goto pwd
+
+:namet
+cls
+type C:\LOL_VIRUS\files\art.txt
+echo.
+echo What is your name?
+
+echo.
+Set /p name="Name: "
+if not defined name goto namet
+if "%name%"=="0" (goto hello)
+cls
+goto hello
+
+:hello
+cls
+type C:\LOL_VIRUS\files\art.txt
+echo.
+echo Hello, %name%
+echo.
+timeout /t 3 /nobreak >nul
+cls
+goto menu
 
 :menu
 cls
-title Fikali by SuperPaket123YT and help from GGYT :3
-type C:\fikali\files\art.txt
+title (C) By GGYT Progs and help from DiopinYT :3
+type C:\LOL_VIRUS\files\art.txt
 echo.
-echo Choose an action:
+echo %name%, choose an action:
 echo.
 echo 1 - Run a virus
 echo 2 - Settings
@@ -52,9 +75,9 @@ goto menu
 
 :q1
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
-echo Are you sure you want to launch a virus? (y/n)
+echo %name%, are you sure you want to launch a virus? (y/n)
 
 echo.
 Set /p choice="ChOiCe: "
@@ -66,10 +89,10 @@ goto q
 
 :q2
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo LAST WARNING!!! 
-echo This application will turn on EVERY time you turn on your PC / LAPTOP!!! Are you confident in your actions? (y/n)
+echo This application will turn on EVERY time you turn on your PC / LAPTOP!!! %name%, are you confident in your actions? (y/n)
 
 echo.
 Set /p choice="CHOICE: "
@@ -79,13 +102,13 @@ if "%choice%"=="n" (goto menu)
 
 :strt
 cls
-start C:\fikali\files\bomb\startall.bat
+start C:\LOL_VIRUS\files\bomb\startall.bat
 cls
 goto stop
 
 :stop
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Press Enter to close all.
 pause >nul
@@ -103,7 +126,7 @@ REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v notepad /f
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v control /f
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v ramspam /f
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Virus from startup removed
 echo.
@@ -113,9 +136,9 @@ goto menu
 
 :setng
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
-echo Select an item:
+echo %name%, select an item:
 echo.
 echo 1 - Change text color
 echo 2 - Update Center
@@ -132,9 +155,9 @@ goto setng
 
 :color
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
-echo Select text color
+echo %name%, select text color
 echo.
 echo 1 - Red
 echo 2 - Green
@@ -210,7 +233,7 @@ goto menu
 
 :updcenter
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo %name%, would you like to check for updates? (y/n)
 echo.
@@ -224,10 +247,11 @@ goto updcenter
 
 :updchk
 cls
-del C:\temp_fikali\ver.txt >nul
-bitsadmin.exe /transfer "GGYT" https://raw.githubusercontent.com/SuperPaket123YT/Fikali/fikali/ver.txt C:\temp_fikali\ver.txt >nul
-cd C:\temp_fikali
-find /I ver.txt "2.0" >nul
+del C:\tmp_lolvirus\ver.txt >nul
+cls
+bitsadmin.exe /transfer "GGYT" https://raw.githubusercontent.com/GGYT1/LOL_VIRUS/master/ver.txt C:\tmp_lolvirus\ver.txt >nul
+cd C:\tmp_lolvirus
+find /I ver.txt "2.0 >nul
 if %errorlevel% equ 0 (
   goto updno
 ) else (
@@ -237,7 +261,7 @@ goto updchk
 
 :updfind
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Update found. Download? (y/n)
 echo.
@@ -251,20 +275,20 @@ goto updfind
 
 :upddown
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Downloading...
-bitsadmin.exe /transfer "GGYT" https://github.com/SuperPaket123YT/Fikali/releases/download/fikalivirus/Fikali.exe C:\temp_fikali\Fikali.exe >nul
+bitsadmin.exe /transfer "GGYT" https://github.com/GGYT1/LOL_VIRUS/releases/download/lolvirus/LOL_VIRUS.exe C:\tmp_lolvirus\LOL_VIRUS.exe >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Download complete. Installation....
 timeout /t 5 /nobreak
-start C:\temp_fikali\Fikali.exe
+start C:\tmp_lolvirus\LOL_VIRUS.exe
 exit
 
 :updno
-type C:\Fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo You have the latest version installed.
 echo.
@@ -274,9 +298,9 @@ goto setng
 
 :exit
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
-echo Are you sure you want to exit? (y/n)
+echo %name%, are you sure you want to exit? (y/n)
 
 echo.
 Set /p choice="Choice: "
@@ -288,18 +312,18 @@ goto exit
 
 :exwt
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Please wait...
 timeout /t 5 /nobreak >nul
-del C:\temp_fikali /s /q
+del C:\tmp_lolvirus /s /q
 exit
 
 :hlp
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
-echo !!!!FIKALI, THIS IS A VIRUS THAT CAN LOAD YOUR SYSTEM TO THE POINT YOU CANNOT USE IT!!!
+echo !!!!LOL_VIRUS, THIS IS A VIRUS THAT CAN LOAD YOUR SYSTEM TO THE POINT YOU CANNOT USE IT!!!
 echo.
 echo Instruction:
 echo.
@@ -314,7 +338,7 @@ echo.
 echo Read more (press Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Step 1: "Run a virus"
 echo.
@@ -326,20 +350,20 @@ echo.
 echo Read more (press Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Step 2: "Settings"
 echo.
 echo When you go to "Settings" there will be items:
 echo.
 echo 1 - Change text color
-echo 2 - Update Center (soon)
+echo 2 - Update Center
 echo 3 - Back
 echo.
 echo Read more (press Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Step 2.1: "Change text color"
 echo.
@@ -348,16 +372,16 @@ echo.
 echo Read more (press Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Step 2.2: "Update Center"
 echo.
-echo It doesn't work yet. Why write instructions for it?
+echo ...
 echo.
 echo Read more (press Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Step 2.3: "Back"
 echo.
@@ -366,7 +390,7 @@ echo.
 echo Read more (press Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Step 3: "Remove virus from startup"
 echo.
@@ -375,7 +399,7 @@ echo.
 echo Read more (press Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Step 4: "Instructions" (this window)
 echo.
@@ -384,7 +408,7 @@ echo.
 echo Read more (press Enter)
 pause >nul
 cls
-type C:\fikali\files\art.txt
+type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Step 5: "Exit"
 echo.
