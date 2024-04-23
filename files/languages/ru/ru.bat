@@ -232,6 +232,7 @@ color ae
 goto menu
 
 :updcenter
+ver | find "5.1" >nul && goto xpupd
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
@@ -292,6 +293,16 @@ echo.
 echo У вас установлена последняя версия.
 echo.
 echo Нажмите Enter для возвращения в меню...
+pause >nul
+goto setng
+
+:xpupd
+cls
+type C:\LOL_VIRUS\files\art.txt
+echo.
+echo Извините, на Виндовс XP Центр обновлений работать не будет :(
+echo.
+echo Пора бы обновить ОС)
 pause >nul
 goto setng
 

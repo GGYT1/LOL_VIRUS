@@ -232,6 +232,7 @@ color ae
 goto menu
 
 :updcenter
+ver | find "5.1" >nul && goto xpupd
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
@@ -293,6 +294,16 @@ echo.
 echo You have the latest version installed.
 echo.
 echo Press Enter to return to the menu...
+pause >nul
+goto setng
+
+:xpupd
+cls
+type C:\LOL_VIRUS\files\art.txt
+echo.
+echo Sorry, Update Center will not work on Windows XP :(
+echo.
+echo It's time to update the OS)
 pause >nul
 goto setng
 
@@ -376,7 +387,7 @@ type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Step 2.2: "Update Center"
 echo.
-echo ...
+echo The Update Center will help you check if there is a new version of the virus on GitHub.
 echo.
 echo Read more (press Enter)
 pause >nul

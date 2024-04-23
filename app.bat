@@ -12,31 +12,9 @@ echo Disclaimer! / Дисклеймер!
 echo.
 echo En: LOL_VIRUS is a virus that can load your system to the point where you can't use it.
 echo     Restarting your computer will not help you, since this virus is written to startup.
-echo     Wait 10 seconds...
 echo.
 echo Ru: LOL_VIRUS, это вирус который может нагрузить вашу систему до того, что вы не сможете ей пользоваться. 
 echo     Перезагрузка компьютера вам не поможет так как этот вирус прописывается в автозагрузку. 
-echo     Подождите 10 секунд...
-title 10..
-timeout /t 1 /nobreak >nul
-title 9..
-timeout /t 1 /nobreak >nul
-title 8..
-timeout /t 1 /nobreak >nul
-title 7..
-timeout /t 1 /nobreak >nul
-title 6..
-timeout /t 1 /nobreak >nul
-title 5..
-timeout /t 1 /nobreak >nul
-title 4..
-timeout /t 1 /nobreak >nul
-title 3..
-timeout /t 1 /nobreak >nul
-title 2..
-timeout /t 1 /nobreak >nul
-title 1..
-timeout /t 1 /nobreak >nul
 title Press any key to continue...
 echo.
 echo.
@@ -69,7 +47,7 @@ cls
 goto nc
 
 :nc
-ver | find "10.0.22621" >nul && goto warn
+ver | find "5.1" >nul && goto warn
 cls
 goto c
 
@@ -78,24 +56,12 @@ cls
 title Warning!
 type C:\LOL_VIRUS\files\art.txt
 echo.
-echo En: Wait! You are using Windows 11! This program may not work correctly on this OS!
+echo En: Wait! You are using Windows XP! This program may not work correctly on this OS!
 echo If you find bugs, write to E-mail: ggytprogs0981@gmail.com
-echo Wait 5 seconds to continue
 echo.
-echo Ru: Постой! Вы используете Windows 11! Эта программа может неправильно работать на этой ОС!
+echo Ru: Постой! Вы используете Windows XP! Эта программа может неправильно работать на этой ОС!
 echo Если вы найдёте баги, напишите на E-mail: ggytprogs0981@gmail.com
-echo Для продолжения подождите 5 секунд
 echo.
-title 5..
-timeout /t 1 /nobreak >nul
-title 4..
-timeout /t 1 /nobreak >nul
-title 3..
-timeout /t 1 /nobreak >nul
-title 2..
-timeout /t 1 /nobreak >nul
-title 1..
-timeout /t 1 /nobreak >nul
 title Press any key to continue...
 echo Нажмите любую клавишу для продолжения / Press any key to continue
 pause >nul
