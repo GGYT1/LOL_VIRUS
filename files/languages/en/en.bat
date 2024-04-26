@@ -142,14 +142,16 @@ echo %name%, select an item:
 echo.
 echo 1 - Change text color
 echo 2 - Update Center
-echo 3 - Back
+echo 3 - Remove all virus files
+echo 4 - Back
 
 echo.
 Set /p choice="Choice: "
 if not defined choice goto setng
 if "%choice%"=="1" (goto color)
 if "%choice%"=="2" (goto updcenter)
-if "%choice%"=="3" (goto menu)
+if "%choice%"=="3" (goto uninstq)
+if "%choice%"=="4" (goto menu)
 cls
 goto setng
 
@@ -252,7 +254,7 @@ del C:\tmp_lolvirus\ver.txt >nul
 cls
 bitsadmin.exe /transfer "GGYT" https://raw.githubusercontent.com/GGYT1/LOL_VIRUS/master/ver.txt C:\tmp_lolvirus\ver.txt >nul
 cd C:\tmp_lolvirus
-find /I ver.txt "2.0 >nul
+find /I ver.txt "2.2" >nul
 if %errorlevel% equ 0 (
   goto updno
 ) else (
@@ -307,6 +309,32 @@ echo It's time to update the OS)
 pause >nul
 goto setng
 
+:uninstq
+cls
+type C:\LOL_VIRUS\files\art.txt
+echo.
+echo Do you really want to remove all virus files? (y/n)
+echo.
+echo This will close this window.
+echo.
+
+Set /p choice="Choice: "
+if not defined choice goto uninstq
+if "%choice%"=="y" (goto uninstall)
+if "%choice%"=="n" (goto setng)
+cls
+goto uninstq
+
+:uninstall
+cls
+type C:\LOL_VIRUS\files\art.txt
+echo.
+echo Please wait...
+rd C:\tmp_lolvirus\ /s /q >nul
+timeout /t 5 /nobreak >nul
+start C:\LOL_VIRUS\files\bomb\uninstall.lnk
+exit
+
 :exit
 cls
 type C:\LOL_VIRUS\files\art.txt
@@ -327,14 +355,14 @@ type C:\LOL_VIRUS\files\art.txt
 echo.
 echo Please wait...
 timeout /t 5 /nobreak >nul
-del C:\tmp_lolvirus /s /q
+rd C:\tmp_lolvirus /s /q
 exit
 
 :hlp
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
-echo !!!!LOL_VIRUS, THIS IS A VIRUS THAT CAN LOAD YOUR SYSTEM TO THE POINT YOU CANNOT USE IT!!!
+echo !!!!LOL_VIRUS, THIS IS A VIRUS THAT CAN LOAD YOUR SYSTEM TO THE POINT YOU CANNOT USE IT!!!!
 echo.
 echo Instruction:
 echo.
