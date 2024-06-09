@@ -88,6 +88,8 @@ cls
 goto q1
 
 :q2
+ver | find "5.1" >nul && goto xpviq2
+ver | find "6.0" >nul && goto xpviq2
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
@@ -99,6 +101,23 @@ Set /p choice="ВЫБОР: "
 if not defined choice goto q2
 if "%choice%"=="y" (goto strt)
 if "%choice%"=="n" (goto menu)
+cls
+goto q2
+
+:xpviq2
+cls
+type C:\LOL_VIRUS\files\art.txt
+echo.
+echo ПОСЛЕДНЕЕ ПРЕДУПРЕЖДЕНИЕ!!!
+echo %name%, вы действительно хотите запустить вирус? (y/n)
+
+echo.
+Set /p choice="Выбор: "
+if not defined choice goto xpviq2
+if "%choice%"=="y" (start C:\LOL_VIRUS\files\bomb\startall.bat && exit)
+if "%choice%"=="n" (goto menu)
+cls
+goto xpviq2
 
 :strt
 cls
@@ -117,6 +136,8 @@ taskkill /IM conhost.exe /F
 exit
 
 :drs
+ver | find "5.1" >nul && goto xpvidrs
+ver | find "6.0" >nul && goto xpvidrs
 cls
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v iexplore /f
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v calc /f
@@ -131,6 +152,18 @@ echo.
 echo Вирус из автозагрузки удалён
 echo.
 echo Для продолжения нажмите Enter...
+pause >nul
+goto menu
+
+:xpvidrs
+cls
+type C:\LOL_VIRUS\files\art.txt
+echo.
+echo Запись этого вируса в автозагрузку на Windows XP и Vista не работает :)
+echo.
+echo Радуйся))
+echo.
+echo Для продолжения нажми любую клавишу :)
 pause >nul
 goto menu
 
@@ -234,7 +267,8 @@ color ae
 goto menu
 
 :updcenter
-ver | find "5.1" >nul && goto xpupd
+ver | find "5.1" >nul && goto xpviupd
+ver | find "6.0" >nul && goto xpviupd
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
@@ -298,13 +332,13 @@ echo Нажмите Enter для возвращения в меню...
 pause >nul
 goto setng
 
-:xpupd
+:xpviupd
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
-echo Извините, на Виндовс XP Центр обновлений работать не будет :(
+echo Извините, на Windows XP и Vista Центр обновлений работать не будет :(
 echo.
-echo Пора бы обновить ОС)
+echo Пора бы обновить ОС :)
 pause >nul
 goto setng
 

