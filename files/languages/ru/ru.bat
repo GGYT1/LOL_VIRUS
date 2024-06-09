@@ -287,7 +287,7 @@ cls
 del C:\tmp_lolvirus\ver.txt
 bitsadmin.exe /transfer "GGYT" https://raw.githubusercontent.com/GGYT1/LOL_VIRUS/master/ver.txt C:\tmp_lolvirus\ver.txt >nul
 cd C:\tmp_lolvirus
-find /I ver.txt "2.2" >nul
+find /I ver.txt "2.3" >nul
 if %errorlevel% equ 0 (
   goto updno
 ) else (
