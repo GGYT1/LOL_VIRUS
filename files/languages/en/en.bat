@@ -3,6 +3,8 @@ call :Adm
 chcp 866
 color e
 ver | find "5.0" >nul && exit
+ver | find "5.1" >nul && exit
+ver | find "6.0" >nul && exit
 cls
 goto pwd
 
@@ -40,6 +42,8 @@ cls
 goto hello
 
 :hello
+cls
+start C:\LOL_VIRUS\files\languages\en\sounds\hello.vbs
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
@@ -88,8 +92,6 @@ cls
 goto q1
 
 :q2
-ver | find "5.1" >nul && goto xpviq2
-ver | find "6.0" >nul && goto xpviq2
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
@@ -103,21 +105,6 @@ if "%choice%"=="y" (goto strt)
 if "%choice%"=="n" (goto menu)
 cls
 goto q2
-
-:xpviq2
-cls
-type C:\LOL_VIRUS\files\art.txt
-echo.
-echo LAST WARNING!!!
-echo %name%, are you sure you want to run a virus? (y/n)
-
-echo.
-Set /p choice="Choice: "
-if not defined choice goto xpviq2
-if "%choice%"=="y" (start C:\LOL_VIRUS\files\bomb\startall.bat && exit)
-if "%choice%"=="n" (goto menu)
-cls
-goto xpviq2
 
 :strt
 cls
@@ -136,8 +123,6 @@ taskkill /IM conhost.exe /F
 exit
 
 :drs
-ver | find "5.1" >nul && goto xpvidrs
-ver | find "6.0" >nul && goto xpvidrs
 cls
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v iexplore /f
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v calc /f
@@ -152,18 +137,6 @@ echo.
 echo Virus from startup removed
 echo.
 echo Press Enter to continue...
-pause >nul
-goto menu
-
-:xpvidrs
-cls
-type C:\LOL_VIRUS\files\art.txt
-echo.
-echo Adding this virus to startup on Windows XP and Vista does not work :)
-echo.
-echo Rejoice))
-echo.
-echo To continue, press any key :)
 pause >nul
 goto menu
 
@@ -267,8 +240,6 @@ color ae
 goto menu
 
 :updcenter
-ver | find "5.1" >nul && goto xpupd
-ver | find "6.0" >nul && goto xpviupd
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
@@ -288,7 +259,7 @@ del C:\tmp_lolvirus\ver.txt >nul
 cls
 bitsadmin.exe /transfer "GGYT" https://raw.githubusercontent.com/GGYT1/LOL_VIRUS/master/ver.txt C:\tmp_lolvirus\ver.txt >nul
 cd C:\tmp_lolvirus
-find /I ver.txt "2.3" >nul
+find /I ver.txt "2.5" >nul
 if %errorlevel% equ 0 (
   goto updno
 ) else (
@@ -330,16 +301,6 @@ echo.
 echo You have the latest version installed.
 echo.
 echo Press Enter to return to the menu...
-pause >nul
-goto setng
-
-:xpupd
-cls
-type C:\LOL_VIRUS\files\art.txt
-echo.
-echo Sorry, Update Center will not work on Windows XP and Vista :(
-echo.
-echo It's time to update the OS)
 pause >nul
 goto setng
 

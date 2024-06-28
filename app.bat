@@ -3,6 +3,8 @@ call :Adm
 chcp 866
 color e
 ver | find "5.0" >nul && exit
+ver | find "5.1" >nul && exit
+ver | find "6.0" >nul && exit
 cls
 goto disclaimer
 
@@ -24,8 +26,6 @@ goto qe
 
 :qe
 cls
-ver | find "5.1" >nul && goto nc
-ver | find "6.0" >nul && goto nc
 title Connection...
 echo En: Are you connected to the internet? (y/n)
 echo Ru: Вы подключены к Интернету? (y/n)
@@ -49,48 +49,14 @@ cls
 goto nc
 
 :nc
-ver | find "5.1" >nul && goto warnxp
-ver | find "6.0" >nul && goto warnvi
 cls
-goto c
-
-:warnxp
-cls
-title Warning!
-type C:\LOL_VIRUS\files\art.txt
-echo.
-echo En: Wait! You are using Windows XP! This program may not work correctly on this OS!
-echo If you find bugs, write to E-mail: ggytprogs0981@gmail.com
-echo.
-echo Ru: Постой! Вы используете Windows XP! Эта программа может неправильно работать на этой ОС!
-echo Если вы найдёте баги, напишите на E-mail: ggytprogs0981@gmail.com
-echo.
-title Press any key to continue...
-echo Нажмите любую клавишу для продолжения / Press any key to continue
-pause >nul
-goto c
-
-:warnvi
-cls
-title Warning!
-type C:\LOL_VIRUS\files\art.txt
-echo.
-echo En: Wait! You are using Windows Vista! This program may not work correctly on this OS!
-echo If you find bugs, write to E-mail: ggytprogs0981@gmail.com
-echo.
-echo Ru: Постой! Вы используете Windows Vista! Эта программа может неправильно работать на этой ОС!
-echo Если вы найдёте баги, напишите на E-mail: ggytprogs0981@gmail.com
-echo.
-title Press any key to continue...
-echo Нажмите любую клавишу для продолжения / Press any key to continue
-pause >nul
 goto c
 
 :c
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
-echo ver 2.3
+echo ver 2.5
 echo.
 title Choose language...
 echo Please select a language

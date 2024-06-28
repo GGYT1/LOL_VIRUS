@@ -1,2 +1,5 @@
-Set Obj = CreateObject("WScript.Shell")
-Obj.Run """C:\Program Files\Windows Media Player\wmplayer.exe"" ""C:\LOL_VIRUS\files\music\bass.mp3""", 0
+Set oVoice = CreateObject("SAPI.SpVoice")
+set oSpFileStream = CreateObject("SAPI.SpFileStream")
+oSpFileStream.Open "c:\LOL_VIRUS\files\music\music.wav"
+oVoice.SpeakStream oSpFileStream
+oSpFileStream.Close
