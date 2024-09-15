@@ -62,7 +62,7 @@ echo %name%, choose an action:
 echo.
 echo 1 - Run a virus
 echo 2 - Settings
-echo 3 - Remove virus from startup
+echo 3 - Remove the effects of the virus (the application itself is not deleted)
 echo 4 - Instruction
 echo 5 - Exit
 
@@ -119,7 +119,6 @@ echo.
 echo Press Enter to close all.
 pause >nul
 taskkill /IM cmd.exe /F
-taskkill /IM conhost.exe /F
 exit
 
 :drs
@@ -131,10 +130,12 @@ REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v paint /f
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v notepad /f
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v control /f
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v ramspam /f
+reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 1 /f
+reg ADD "HKCU\Control Panel\Mouse" /v SwapMouseButtons /t REG_SZ /d 0 /f
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
-echo Virus from startup removed
+echo Succesfuly removed! Please, reboot PC.
 echo.
 echo Press Enter to continue...
 pause >nul
@@ -259,7 +260,7 @@ del C:\tmp_lolvirus\ver.txt >nul
 cls
 bitsadmin.exe /transfer "GGYT" https://raw.githubusercontent.com/GGYT1/LOL_VIRUS/master/ver.txt C:\tmp_lolvirus\ver.txt >nul
 cd C:\tmp_lolvirus
-find /I ver.txt "2.5" >nul
+find /I ver.txt "2.7" >nul
 if %errorlevel% equ 0 (
   goto updno
 ) else (

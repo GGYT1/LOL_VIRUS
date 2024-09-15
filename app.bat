@@ -56,7 +56,7 @@ goto c
 cls
 type C:\LOL_VIRUS\files\art.txt
 echo.
-echo ver 2.5
+echo ver 2.7
 echo.
 title Choose language...
 echo Please select a language
